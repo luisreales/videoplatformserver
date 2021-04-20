@@ -22,7 +22,7 @@ const app = express();
 //habilitar los cors entre el front y el back
 
 var corsOptions = {
-    origin : 'http://localhost:3000'
+    origin :process.env.SITE_ORIGING_CORS
 }
 
 app.use(cors(corsOptions));
@@ -38,7 +38,7 @@ const multer = require('multer');
 
 //settings
 
-app.set('port',process.env.PORT || 3000)
+app.set('port',process.env.PORT || 3500)
 app.set('view',path.join(__dirname,'views'));
 app.set('view engine', 'ejs');
 
